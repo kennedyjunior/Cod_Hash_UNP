@@ -65,6 +65,7 @@ def alterar_place_holder_dec():
 
 janela.bind("<Button-1>", alterar_place_holder_cod)
 
+<<<<<<< Updated upstream
 def alterar_btn():
     btn.configure(text="Codificar")
 
@@ -76,17 +77,34 @@ def alterar_btn1():
 box_text_dec1 = ctk.CTkEntry(janela, width=295, height=30, placeholder_text="Aqui irá aparecer o resultado da sua requisição", border_color="#6B1CB4",
                             border_width=2, fg_color="#333030")
 box_text_dec1.place(x=25, y=150)
+=======
+box_text_dec2 = ctk.CTkEntry(janela, width=295, height=30, placeholder_text="Insira o valor shift: ", border_color="#6B1CB4",
+                            border_width=2, fg_color="#333030")
+box_text_dec2.place(x=25, y=150)
+
+box_text_dec1 = ctk.CTkEntry(janela, width=295, height=30, placeholder_text="Aqui irá aparecer o resultado da sua requisição", border_color="#6B1CB4",
+                            border_width=2, fg_color="#333030")
+box_text_dec1.place(x=25, y=200)
+>>>>>>> Stashed changes
 box_text_dec1.configure(state="readonly")
 
 
 
+<<<<<<< Updated upstream
 btn_codificar = ctk.CTkButton(master=janela, text="Codificar", command=alterar_place_holder_cod and alterar_btn, font=("Bold", 20),
+=======
+btn_codificar = ctk.CTkButton(master=janela, text="Codificar", command=alterar_place_holder_cod, font=("Bold", 20),
+>>>>>>> Stashed changes
                               corner_radius=32, fg_color="#333030",
                               hover_color="#6B1CB4", border_color="#6B1CB4",
                               border_width=2)
 btn_codificar.place(x=25, y= 55)
 
+<<<<<<< Updated upstream
 btn_decodificar = ctk.CTkButton(master=janela, text="Decodificar", command=alterar_place_holder_dec and alterar_btn1, font=("Bold", 20),
+=======
+btn_decodificar = ctk.CTkButton(master=janela, text="Decodificar", command=alterar_place_holder_dec, font=("Bold", 20),
+>>>>>>> Stashed changes
                               corner_radius=32, fg_color="#333030",
                               hover_color="#6B1CB4", border_color="#6B1CB4",
                               border_width=2)
