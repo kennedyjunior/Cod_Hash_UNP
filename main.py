@@ -64,6 +64,7 @@ def alterar_place_holder_dec():
     janela.focus_set()
 
 janela.bind("<Button-1>", alterar_place_holder_cod)
+<<<<<<< Updated upstream
 
 <<<<<<< Updated upstream
 def alterar_btn():
@@ -71,6 +72,8 @@ def alterar_btn():
 
 def alterar_btn1():
     btn.configure(text="Decodificar")
+=======
+>>>>>>> Stashed changes
     
 
 
@@ -88,11 +91,14 @@ box_text_dec1.place(x=25, y=200)
 >>>>>>> Stashed changes
 box_text_dec1.configure(state="readonly")
 
+<<<<<<< Updated upstream
 
 
 <<<<<<< Updated upstream
 btn_codificar = ctk.CTkButton(master=janela, text="Codificar", command=alterar_place_holder_cod and alterar_btn, font=("Bold", 20),
 =======
+=======
+>>>>>>> Stashed changes
 btn_codificar = ctk.CTkButton(master=janela, text="Codificar", command=alterar_place_holder_cod, font=("Bold", 20),
 >>>>>>> Stashed changes
                               corner_radius=32, fg_color="#333030",
@@ -101,8 +107,11 @@ btn_codificar = ctk.CTkButton(master=janela, text="Codificar", command=alterar_p
 btn_codificar.place(x=25, y= 55)
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 btn_decodificar = ctk.CTkButton(master=janela, text="Decodificar", command=alterar_place_holder_dec and alterar_btn1, font=("Bold", 20),
 =======
+=======
+>>>>>>> Stashed changes
 btn_decodificar = ctk.CTkButton(master=janela, text="Decodificar", command=alterar_place_holder_dec, font=("Bold", 20),
 >>>>>>> Stashed changes
                               corner_radius=32, fg_color="#333030",
