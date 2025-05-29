@@ -21,17 +21,19 @@ def alternar_tema():
     if tema_atual == "Dark":
         ctk.set_appearance_mode("Light")
         tema_atual = "Light"
-        btn_tema.configure(image=img_sol, text="Light mode")
+        btn_tema.configure(image=img_sol, text="Light mode", text_color="black", fg_color="#ACA8A8")
         btn.configure(text_color="black")
 
     else:
         ctk.set_appearance_mode("Dark")
         tema_atual = "Dark"
-        btn_tema.configure(image=img_lua, text="Dark mode")
+        btn_tema.configure(image=img_lua, text="Dark mode", text_color="white", fg_color="#333030")
         btn.configure(text_color="white")
         
 
-btn_tema = ctk.CTkButton(janela, text="Dark mode", image=img_lua,
+btn_tema = ctk.CTkButton(janela, text="Dark mode", image=img_lua, fg_color="#333030",
+                         hover_color="#6B1CB4", border_color="#6B1CB4", 
+                         border_width=2,                        
                           command= alternar_tema, width=40, height=40)
 btn_tema.place(relx=1.0, rely= 0.0, anchor= "ne", x=-10, y=10)
 
