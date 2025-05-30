@@ -86,14 +86,12 @@ box_text_dec1.configure(state="readonly")
 
 
 
-btn_codificar = ctk.CTkButton(master=janela, text="Codificar", command=alterar_place_holder_cod and alterar_btn, font=("Bold", 20),
 btn_codificar = ctk.CTkButton(master=janela, text="Codificar", command=alterar_place_holder_cod, font=("Bold", 20),
                               corner_radius=32, fg_color="#333030",
                               hover_color="#6B1CB4", border_color="#6B1CB4",
                               border_width=2)
 btn_codificar.place(x=25, y= 55)
 
-btn_decodificar = ctk.CTkButton(master=janela, text="Decodificar", command=alterar_place_holder_dec and alterar_btn1, font=("Bold", 20),
 btn_decodificar = ctk.CTkButton(master=janela, text="Decodificar", command=alterar_place_holder_dec, font=("Bold", 20),
                               corner_radius=32, fg_color="#333030",
                               hover_color="#6B1CB4", border_color="#6B1CB4",
