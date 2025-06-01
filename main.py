@@ -1,5 +1,14 @@
 mport customtkinter as ctk
 from PIL import Image, ImageTk
+ Pedro-Henrique
+import hashlib
+import tkinter.messagebox as messagebox
+
+import hashlib
+import tkinter.messagebox as messagebox
+
+
+ main
 janela = ctk.CTk()
 janela.geometry("500x400")
 janela.title("Codificador Hash")
@@ -46,7 +55,12 @@ btn = ctk.CTkButton(master=janela, text="Codificar", font=("Bold", 20), corner_r
                     border_width=2)
 btn.place(x=350, y=100)
 
+ Pedro-Henrique
+frame_txt_principal = ctk.CTkFrame(janela, border_width=2, border_color="#6B1CB4", fg_color="transparent")
+frame_txt_principal = ctk.CTkFrame(janela, border_width=2, border_color="#6B1CB4", fg_color="transparent")
+
 frame_txt_principal = ctk.CTkFrame(janela, border_width=2, border_color="#6B1CB4", fg_color="transparent",)
+ main
 frame_txt_principal.place(x=25, y=10)
 texto_principal = ctk.CTkLabel(frame_txt_principal, text="Escolha o modo que deseja:", font=("Bold",23), fg_color="#333030")
 texto_principal.pack(padx=3, pady=2)
