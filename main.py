@@ -93,7 +93,7 @@ btn_decodificar = ctk.CTkButton(master=janela, text="Decodificar", command=alter
                               border_width=2)
 btn_decodificar.place(x=180, y= 55)
 
-# AQUI COMEÇA A PARTE FUNCIONAL ADICIONADA POR VOCÊ
+
 
 def codificar():
     texto = box_text_cod.get()
