@@ -91,6 +91,8 @@ box_text_dec1 = ctk.CTkEntry(janela, width=295, height=30, placeholder_text="Aqu
 box_text_dec1.bind("<Key>", bloquear_teclado)
 <<<<<<< Updated upstream
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 box_text_dec1.place(x=25, y=200)
 box_text_dec1.configure(state="readonly")
 
