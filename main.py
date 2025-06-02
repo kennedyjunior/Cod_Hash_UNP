@@ -103,7 +103,8 @@ def codificar():
     try:
         shift = int(box_text_dec2.get())
     except ValueError:
-        shift = 0
+        messagebox.showwarning("Aviso", "Por favor, insira um valor numérico para o shift.")
+        return
     resultado = cifra_cesar(texto, shift)
     box_text_dec1.configure(state="normal")
     box_text_dec1.delete(0, "end")
