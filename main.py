@@ -41,7 +41,7 @@ btn = ctk.CTkButton(master=janela, text="Codificar", font=("Bold", 20), corner_r
                     hover_color="#6B1CB4", border_color="#6B1CB4", border_width=2)
 btn.place(x=350, y=100)
 
-frame_txt_principal = ctk.CTkFrame(janela, border_width=2, border_color="#6B1CB4", fg_color="transparent")
+frame_txt_principal = ctk.CTkFrame(janela, border_width=2, border_color="#6B1CB4", fg_color="transparent",)
 frame_txt_principal.place(x=25, y=10)
 texto_principal = ctk.CTkLabel(frame_txt_principal, text="Escolha o modo que deseja:", font=("Bold", 23), fg_color="#333030")
 texto_principal.pack(padx=3, pady=2)
@@ -66,9 +66,25 @@ box_text_dec2 = ctk.CTkEntry(janela, width=295, height=30, placeholder_text="Ins
                              border_color="#6B1CB4", border_width=2, fg_color="#333030")
 box_text_dec2.place(x=25, y=150)
 
-box_text_dec1 = ctk.CTkEntry(janela, width=295, height=30, placeholder_text="Aqui irá aparecer o resultado da sua requisição",
-                             border_color="#6B1CB4", border_width=2, fg_color="#333030", state="readonly")
+# Campo de resultado, sem placeholder_text no construtor
+box_text_dec1 = ctk.CTkEntry(janela, width=295, height=30,
+                             border_color="#6B1CB4", border_width=2,
+                             fg_color="#333030", state="readonly")
 box_text_dec1.place(x=25, y=200)
+
+# Funções para simular placeholder no campo resultado
+def mostrar_placeholder_resultado():
+    box_text_dec1.configure(state="normal")
+    box_text_dec1.delete(0, "end")
+    box_text_dec1.insert(0, "Aqui irá aparecer o resultado da sua requisição")
+    box_text_dec1.configure(fg_color="#333030", text_color="#7a7a7a", state="readonly")
+
+def limpar_placeholder_resultado():
+    box_text_dec1.configure(state="normal")
+    box_text_dec1.delete(0, "end")
+    box_text_dec1.configure(fg_color="#333030", text_color="white", state="readonly")
+
+mostrar_placeholder_resultado()
 
 btn_codificar = ctk.CTkButton(master=janela, text="Codificar", command=alterar_place_holder_cod, font=("Bold", 20),
                               corner_radius=32, fg_color="#333030", hover_color="#6B1CB4",
@@ -103,7 +119,7 @@ def codificar():
     box_text_dec1.configure(state="normal")
     box_text_dec1.delete(0, "end")
     box_text_dec1.insert(0, resultado)
-    box_text_dec1.configure(state="readonly")
+    box_text_dec1.configure(fg_color="#333030", text_color="white", state="readonly")
 
 def decodificar():
     texto = box_text_cod.get()
@@ -119,7 +135,7 @@ def decodificar():
     box_text_dec1.configure(state="normal")
     box_text_dec1.delete(0, "end")
     box_text_dec1.insert(0, resultado)
-    box_text_dec1.configure(state="readonly")
+    box_text_dec1.configure(fg_color="#333030", text_color="white", state="readonly")
 
 def executar():
     if btn.cget("text") == "Codificar":
