@@ -81,21 +81,10 @@ box_text_dec2 = ctk.CTkEntry(janela, width=295, height=30, placeholder_text="Ins
                             border_width=2, fg_color="#333030")
 box_text_dec2.place(x=25, y=150)
 
-<<<<<<< Updated upstream
-box_text_dec1 = ctk.CTkEntry(janela, width=295, height=30, placeholder_text="Aqui irá aparecer o resultado da sua requisição", border_color="#6B1CB4",
-                            border_width=2, fg_color="#333030")
-box_text_dec1.place(x=25, y=150)
-=======
 box_text_dec1 = ctk.CTkEntry(janela, width=295, height=30, placeholder_text="Aqui irá aparecer o resultado da sua requisição",
                              border_color="#6B1CB4", border_width=2, fg_color="#333030", state="normal")
 box_text_dec1.bind("<Key>", bloquear_teclado)
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 box_text_dec1.place(x=25, y=200)
-box_text_dec1.configure(state="readonly")
-
 
 
 btn_codificar = ctk.CTkButton(master=janela, text="Codificar", command=alterar_place_holder_cod, font=("Bold", 20),
@@ -110,8 +99,6 @@ btn_decodificar = ctk.CTkButton(master=janela, text="Decodificar", command=alter
                               border_width=2)
 btn_decodificar.place(x=180, y= 55)
 
-<<<<<<< Updated upstream
-=======
 def cifra_cesar(texto, shift): 
     resultado = ""
     for char in texto:
@@ -121,7 +108,6 @@ def cifra_cesar(texto, shift):
         else:
             resultado += char
     return resultado
->>>>>>> Stashed changes
 
 
 
