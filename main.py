@@ -2,6 +2,7 @@ import customtkinter as ctk
 from PIL import Image, ImageTk
 import hashlib
 import tkinter.messagebox as messagebox
+import webbrowser
 
 janela = ctk.CTk()
 janela.geometry("500x400")
@@ -25,13 +26,31 @@ def alternar_tema():
         btn_tema.configure(image=img_sol, text="Light mode", text_color="black", fg_color="#ACA8A8",
                            hover_color="#505050", border_color="#000000")
         btn.configure(text_color="black", hover_color="#505050", border_color="black", fg_color="#ACA8A8")
+        frame_txt_principal.configure(border_color="#000000", fg_color="#ACA8A8")
+        texto_principal.configure(fg_color="#ACA8A8")
+        box_text_cod.configure(border_color="#000000", fg_color="#ACA8A8", placeholder_text_color="black")
+        box_text_dec1.configure(border_color="#000000", fg_color="#ACA8A8", placeholder_text_color="black")
+        box_text_dec2.configure(border_color="#000000", fg_color="#ACA8A8", placeholder_text_color="black")
+        btn_codificar.configure(border_color="black", fg_color="#ACA8A8", hover_color="#505050", text_color="black")
+        btn_decodificar.configure(border_color="black", fg_color="#ACA8A8", hover_color="#505050", text_color="black")
+        label_ajuda.configure(text_color="black")
+        
     else:
         ctk.set_appearance_mode("Dark")
         tema_atual = "Dark"
         btn_tema.configure(image=img_lua, text="Dark mode", text_color="white", fg_color="#333030",
                            hover_color="#6B1CB4", border_color="#6B1CB4")
         btn.configure(text_color="white", hover_color="#6B1CB4", border_color="#6B1CB4", fg_color="#333030")
-
+        frame_txt_principal.configure(border_color="#6B1CB4", fg_color="#333030")
+        texto_principal.configure(fg_color="#333030")
+        box_text_cod.configure(border_color="#6B1CB4", fg_color="#333030", placeholder_text_color="white")
+        box_text_dec1.configure(border_color="#6B1CB4", fg_color="#333030", placeholder_text_color="white")
+        box_text_dec2.configure(border_color="#6B1CB4", fg_color="#333030", placeholder_text_color="white")
+        btn_codificar.configure(border_color="#6B1CB4", fg_color="#333030", hover_color="#6B1CB4", text_color="white")
+        btn_decodificar.configure(border_color="#6B1CB4", fg_color="#333030", hover_color="#6B1CB4", text_color="white")
+        label_ajuda.configure(text_color="white")
+        
+        
 btn_tema = ctk.CTkButton(janela, text="Dark mode", image=img_lua, fg_color="#333030",
                          hover_color="#6B1CB4", border_color="#6B1CB4", 
                          border_width=2, command=alternar_tema, width=40, height=40)
@@ -41,14 +60,21 @@ btn = ctk.CTkButton(master=janela, text="Codificar", font=("Bold", 20), corner_r
                     hover_color="#6B1CB4", border_color="#6B1CB4", border_width=2)
 btn.place(x=350, y=100)
 
-frame_txt_principal = ctk.CTkFrame(janela, border_width=2, border_color="#6B1CB4", fg_color="transparent")
+frame_txt_principal = ctk.CTkFrame(janela, border_width=2, border_color="#6B1CB4", fg_color="#333030")
 frame_txt_principal.place(x=25, y=10)
 texto_principal = ctk.CTkLabel(frame_txt_principal, text="Escolha o modo que deseja:", font=("Bold", 23), fg_color="#333030")
 texto_principal.pack(padx=3, pady=2)
 
 box_text_cod = ctk.CTkEntry(janela, width=295, height=30, placeholder_text="Insira o texto que deseja codificar:",
+                            placeholder_text_color="white",
                             border_color="#6B1CB4", border_width=2, fg_color="#333030")
 box_text_cod.place(x=25, y=100)
+
+label_ajuda = ctk.CTkLabel(janela, text="Está com duvidas? Clique aqui!", text_color="white", cursor="hand2", font=("Bold", 23))
+label_ajuda.place(x=25, y=350)
+
+
+label_ajuda.bind("<Button-1>", lambda e: webbrowser.open("https://github.com/kennedyjunior/Cod_Hash_UNP/blob/main/Ajuda_e_informações"))
 
 def alterar_place_holder_cod():
     box_text_cod.configure(placeholder_text="Insira o texto que deseja codificar:")
@@ -66,11 +92,12 @@ def bloquear_teclado(event):
 janela.bind("<Button-1>", alterar_place_holder_cod)
 
 box_text_dec2 = ctk.CTkEntry(janela, width=295, height=30, placeholder_text="Insira o valor shift:",
+                             placeholder_text_color="white",
                              border_color="#6B1CB4", border_width=2, fg_color="#333030")
 box_text_dec2.place(x=25, y=150)
 
 box_text_dec1 = ctk.CTkEntry(janela, width=295, height=30, placeholder_text="Aqui irá aparecer o resultado da sua requisição",
-                            border_color="#6B1CB4", border_width=2, fg_color="#333030", state="normal")
+                            border_color="#6B1CB4", placeholder_text_color="white", border_width=2, fg_color="#333030", state="normal")
 box_text_dec1.bind("<Key>", bloquear_teclado)
 box_text_dec1.place(x=25, y=200)
 
