@@ -1,1 +1,25 @@
+Explicação Cifra de César:
 
+A cifra de César é um método simples de criptografia em que cada letra do texto original é substituída por outra, deslocada um certo número de posições no alfabeto.
+
+Por exemplo, com um deslocamento de 3:
+
+A vira D
+
+B vira E
+
+C vira F
+...e assim por diante.
+
+Encriptar:
+Para encriptar, você pega cada letra da mensagem e a move para frente no alfabeto pelo número escolhido.
+
+Desencriptar:
+Para desencriptar, faz o contrário: move cada letra para trás no alfabeto pelo mesmo número.
+
+Exemplo com deslocamento 3:
+Texto original: CHAT
+Encriptado: FKDW
+Desencriptado: CHAT
+
+obs: deslocamento é igual shift.
