@@ -1,6 +1,5 @@
 import customtkinter as ctk
 from PIL import Image, ImageTk
-import hashlib
 import tkinter.messagebox as messagebox
 import webbrowser
 
